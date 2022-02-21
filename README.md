@@ -1,4 +1,5 @@
 ## Pseudocode
+<pre>
 START
 Generate the initial population
 Compute fitness
@@ -9,3 +10,4 @@ REPEAT
     Compute fitness
 UNTIL population has converged
 STOP
+</pre>
