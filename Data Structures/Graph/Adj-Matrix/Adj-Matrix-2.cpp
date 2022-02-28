@@ -8,7 +8,8 @@ void addEdge(int m, int n, int weight, int **matrix) {
     matrix[m][n] = weight;
 }
 
-void printMatrix(int dim, int matrix[][]) {
+void printMatrix(int dim, int **matrix) {
+    std::cout << "\nMatrix : \n";
     for(int i=0; i<dim; ++i) {
         std::cout << std::endl << i << " : {"; 
         for(int j=0; j<dim; ++j)
@@ -23,7 +24,11 @@ int main() {
     int nodes;
     std::cout << "\nEnter no. of nodes : ";
 
-    int m[nodes][nodes];
+    std::cin >> nodes;
+
+    int *m[nodes];
+    for(int i=0; i<nodes; ++i)
+        m[i] = new int[nodes];
 
     // Initializing the matrix with zeroes.
     for(int i=0; i<nodes; ++i) 
